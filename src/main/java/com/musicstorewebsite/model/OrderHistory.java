@@ -1,6 +1,10 @@
 package com.musicstorewebsite.model;
 
 import javax.persistence.*;
+
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +14,8 @@ import java.util.List;
  */
 
 @Entity
+@Getter
+@Setter
 public class OrderHistory implements Serializable {
 
     private static final long serialVersionUID = 1083533250613139445L;
@@ -31,75 +37,4 @@ public class OrderHistory implements Serializable {
     private String billingAddress;
     private String shippingAddress;
 
-    public int getOrderHistoryId() {
-        return orderHistoryId;
-    }
-
-    public void setOrderHistoryId(int orderHistoryId) {
-        this.orderHistoryId = orderHistoryId;
-    }
-
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public int getCustomerOrderId() {
-        return customerOrderId;
-    }
-
-    public void setCustomerOrderId(int customerOrderId) {
-        this.customerOrderId = customerOrderId;
-    }
-
-    public int getCartId() {
-        return cartId;
-    }
-
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
-    }
-
-    public List<CartItem> getCartItems() {
-        return cartItems;
-    }
-
-    public void setCartItems(List<CartItem> cartItems) {
-        this.cartItems = cartItems;
-    }
-
-    public double getGrandTotal() {
-        return grandTotal;
-    }
-
-    public void setGrandTotal(double grandTotal) {
-        this.grandTotal = grandTotal;
-    }
-
-    public String getBillingAddress() {
-        return billingAddress;
-    }
-
-    public void setBillingAddress(String billingAddress) {
-        this.billingAddress = billingAddress;
-    }
-
-    public String getShippingAddress() {
-        return shippingAddress;
-    }
-
-    public void setShippingAddress(String shippingAddress) {
-        this.shippingAddress = shippingAddress;
-    }
 }

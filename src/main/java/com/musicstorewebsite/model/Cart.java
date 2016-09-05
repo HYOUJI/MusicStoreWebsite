@@ -2,6 +2,9 @@ package com.musicstorewebsite.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -12,6 +15,8 @@ import java.util.List;
  */
 
 @Entity
+@Getter
+@Setter
 public class Cart implements Serializable{
 
     private static final long serialVersionUID = -2479653100535233857L;
@@ -29,38 +34,5 @@ public class Cart implements Serializable{
     private Customer customer;
 
     private double grandTotal;
-
-    public int getCartId() {
-        return cartId;
-    }
-
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
-    }
-
-    public double getGrandTotal() {
-        return grandTotal;
-    }
-
-    public void setGrandTotal(double grandTotal) {
-        this.grandTotal = grandTotal;
-    }
-
-    public List<CartItem> getCartItems() {
-        return cartItems;
-    }
-
-    public void setCartItems(List<CartItem> cartItems) {
-        this.cartItems = cartItems;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
 
 }
