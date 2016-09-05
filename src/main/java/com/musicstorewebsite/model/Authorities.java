@@ -22,5 +22,4 @@ public class Authorities {
     private String username;
     private String authority;
 
-
 }
